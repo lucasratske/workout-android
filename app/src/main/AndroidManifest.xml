@@ -23,14 +23,23 @@
         </activity>
         <activity
             android:name=".activity.LoginActivity"
-            android:label="@string/title_activity_login"></activity>
+            android:label="@string/title_activity_login" />
         <activity
             android:name=".activity.RegisterActivity"
             android:label="@string/title_activity_register"
             android:parentActivityName=".activity.LoginActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.LoginActivity"></meta-data>
+                android:value=".activity.LoginActivity" />
+        </activity>
+        <activity
+            android:name=".activity.WorkoutsActivity"
+            android:label="@string/title_activity_workouts"
+            android:parentActivityName=".activity.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainActivity">
+            </meta-data>
         </activity>
     </application>
 

@@ -4,6 +4,7 @@ public class Workout {
 
     private String name;
     private int order;
+    private String user;
 
     public Workout() {
 
@@ -23,5 +24,13 @@ public class Workout {
 
     public void setOrder(int order) {
         this.order = order;
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
     }
 }

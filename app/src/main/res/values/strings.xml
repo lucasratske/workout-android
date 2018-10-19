@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">Meus Treinos</string>
+    <string name="app_logout">Sair</string>
     <string name="title_activity_login">Login</string>
     <string name="title_activity_register">Cadastrar</string>
+    <string name="title_activity_workouts">Lista de treinos</string>
+    <string name="title_activity_user">Configurações do usuário</string>
 
     <!-- Strings related to messages (ERRORS)-->
     <string name="error_all_fields_required">Preencha todos os campos para cadastrar</string>
@@ -15,6 +18,10 @@
     <string name="success_signed_in">Usuário logado com sucesso</string>
     <string name="success_register">Usuário cadastrado com sucesso</string>
 
+    <!-- Strings related to dialogs-->
+    <string name="prompt_add">Adicionar</string>
+    <string name="prompt_cancel">Cancelar</string>
+
     <!-- Strings related to login and register -->
     <string name="prompt_name">Nome</string>
     <string name="prompt_email">E-mail</string>
@@ -26,4 +33,13 @@
     <string name="action_sign_in_short">Entrar</string>
     <string name="action_register_short">Cadastrar</string>
 
+    <!-- Strings related to main -->
+    <string name="info_welcome">Bem vindo(a),</string>
+    <string name="prompt_workouts">Ver treinos</string>
+    <string name="prompt_user_settings">Configurações do usuário</string>
+    <string name="prompt_adc_workout">Adicionar treino</string>
+
+    <!-- Strings related to workouts -->
+    <string name="prompt_workout_name">Nome do treino</string>
+    <string name="title_dialog_workout">Adicionar treino</string>
 </resources>

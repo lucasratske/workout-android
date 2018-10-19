@@ -11,6 +11,15 @@ public class User {
     public User() {
     }
 
+    public User(String authId, String name, String email, int age, float weight, int height) {
+        this.authId = authId;
+        this.name = name;
+        this.email = email;
+        this.age = age;
+        this.weight = weight;
+        this.height = height;
+    }
+
     public String getAuthId() {
         return authId;
     }

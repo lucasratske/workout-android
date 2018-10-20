@@ -40,6 +40,17 @@
     <string name="prompt_adc_workout">Adicionar treino</string>
 
     <!-- Strings related to workouts -->
+    <string name="prompt_workout_day">Selecione o dia que irá treinar</string>
     <string name="prompt_workout_name">Nome do treino</string>
+    <string name="prompt_workout_description">Descrição do treino</string>
     <string name="title_dialog_workout">Adicionar treino</string>
+    <string name="radio_monday">Segunda-feira</string>
+    <string name="radio_tuesday">Terça-feira</string>
+    <string name="radio_wednesday">Quarta-feira</string>
+    <string name="radio_thursday">Quinta-feira</string>
+    <string name="radio_friday">Sexta-feira</string>
+    <string name="radio_saturday">Sábado</string>
+    <string name="radio_sunday">Domingo</string>
+    <string name="prompt_choose_workout_day">Escolha o dia de treino</string>
+    <string name="info_no_workout">Dia livre? Nenhum treino cadastrado!</string>
 </resources>

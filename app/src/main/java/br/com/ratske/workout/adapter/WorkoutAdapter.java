@@ -2,6 +2,7 @@ package br.com.ratske.workout.adapter;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,7 +22,6 @@ public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.MyViewHo
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-
         View itemLista = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.adapter_workout, viewGroup, false);
 
@@ -33,6 +33,7 @@ public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.MyViewHo
 
         Workout workout = workouts .get(i);
         myViewHolder.name.setText(workout.getName());
+        myViewHolder.description.setText(workout.getDescription());
     }
 
     @Override
@@ -43,11 +44,13 @@ public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.MyViewHo
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView name;
+        TextView description;
 
         public MyViewHolder(View itemView) {
             super(itemView);
 
             name = itemView.findViewById(R.id.tvName);
+            description = itemView.findViewById(R.id.tvDescription);
 
         }
     }

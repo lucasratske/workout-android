@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
                 // ...
             }
         };
-        qUsers.addValueEventListener(userListener);
+        qUsers.addListenerForSingleValueEvent(userListener);
     }
 
     @Override

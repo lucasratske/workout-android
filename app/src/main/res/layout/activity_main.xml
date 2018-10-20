@@ -39,12 +39,13 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
+        android:onClick="openUser"
         android:text="@string/prompt_user_settings"
+        android:theme="@style/Widget.MaterialComponents.Button.UnelevatedButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        android:theme="@style/Widget.MaterialComponents.Button.UnelevatedButton" />
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
 
 </android.support.constraint.ConstraintLayout>

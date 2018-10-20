@@ -23,7 +23,6 @@ import br.com.ratske.workout.utils.Utils;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    private DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
     private FirebaseAuth mAuth = FirebaseAuth.getInstance();
     private FirebaseAuth.AuthStateListener mAuthListener;
     private EditText textEmail;
@@ -86,12 +85,15 @@ public class RegisterActivity extends AppCompatActivity {
                         new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
+
                                 if (task.isSuccessful()) {
 
                                     FirebaseUser firebaseUser = mAuth.getCurrentUser();
 
-                                    DatabaseReference users = reference.child("users");
+                                    DatabaseReference users = FirebaseDatabase.getInstance().getReference("users");
+                                    String key = users.push().getKey();
                                     User user = new User();
+                                    user.setId(key);
                                     user.setAuthId(firebaseUser.getUid());
                                     user.setName(textName.getText().toString());
                                     user.setEmail(firebaseUser.getEmail());
@@ -99,7 +101,7 @@ public class RegisterActivity extends AppCompatActivity {
                                     user.setWeight(Float.parseFloat(textWeight.getText().toString()));
                                     user.setHeight(Integer.parseInt(textHeight.getText().toString()));
 
-                                    users.push().setValue(user);
+                                    users.child(key).setValue(user);
 
                                     Toast.makeText(
                                             RegisterActivity.this,

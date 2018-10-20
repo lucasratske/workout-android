@@ -118,4 +118,9 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(MainActivity.this, WorkoutsActivity.class);
         startActivity(i);
     }
+
+    public void openUser(View view) {
+        Intent i = new Intent(MainActivity.this, UserActivity.class);
+        startActivity(i);
+    }
 }

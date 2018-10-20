@@ -1,6 +1,7 @@
 package br.com.ratske.workout.model;
 
 public class User {
+    private String id;
     private String authId;
     private String name;
     private String email;
@@ -11,13 +12,12 @@ public class User {
     public User() {
     }
 
-    public User(String authId, String name, String email, int age, float weight, int height) {
-        this.authId = authId;
-        this.name = name;
-        this.email = email;
-        this.age = age;
-        this.weight = weight;
-        this.height = height;
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getAuthId() {

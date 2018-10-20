@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">Meus Treinos</string>
+    <string name="app_logout">Sair</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_register">Cadastrar</string>
+    <string name="title_activity_workouts">Lista de treinos</string>
+    <string name="title_activity_user">Configurações do usuário</string>
+
+    <!-- Strings related to messages (ERRORS)-->
+    <string name="error_all_fields_required">Preencha todos os campos para cadastrar</string>
+    <string name="error_field_required">Este campo é obrigatório</string>
+    <string name="error_invalid_email">Este e-mail é invalido</string>
+    <string name="error_invalid_password">Esta senha é invalida</string>
+    <string name="error_incorrect_password">E-mail ou senha incorretos</string>
+    <string name="error_register">Erro ao cadastrar o usuário</string>
+
+    <!-- Strings related to messages (SUCCESS)-->
+    <string name="success_signed_in">Usuário logado com sucesso</string>
+    <string name="success_register">Usuário cadastrado com sucesso</string>
+
+    <!-- Strings related to dialogs-->
+    <string name="prompt_add">Adicionar</string>
+    <string name="prompt_cancel">Cancelar</string>
+
+    <!-- Strings related to login and register -->
+    <string name="prompt_name">Nome</string>
+    <string name="prompt_email">E-mail</string>
+    <string name="prompt_password">Senha</string>
+    <string name="prompt_age">Idade</string>
+    <string name="prompt_weight">Peso</string>
+    <string name="prompt_height">Altura (cm)</string>
+    <string name="action_register">Desejo me cadastrar</string>
+    <string name="action_sign_in_short">Entrar</string>
+    <string name="action_register_short">Cadastrar</string>
+
+    <!-- Strings related to main -->
+    <string name="info_welcome">Bem vindo(a),</string>
+    <string name="prompt_workouts">Ver treinos</string>
+    <string name="prompt_user_settings">Configurações do usuário</string>
+    <string name="prompt_adc_workout">Adicionar treino</string>
+
+    <!-- Strings related to workouts -->
+    <string name="prompt_workout_day">Selecione o dia que irá treinar</string>
+    <string name="prompt_workout_name">Nome do treino</string>
+    <string name="prompt_workout_description">Descrição do treino</string>
+    <string name="title_dialog_workout">Adicionar treino</string>
+    <string name="radio_monday">Segunda-feira</string>
+    <string name="radio_tuesday">Terça-feira</string>
+    <string name="radio_wednesday">Quarta-feira</string>
+    <string name="radio_thursday">Quinta-feira</string>
+    <string name="radio_friday">Sexta-feira</string>
+    <string name="radio_saturday">Sábado</string>
+    <string name="radio_sunday">Domingo</string>
+    <string name="prompt_choose_workout_day">Escolha o dia de treino</string>
+    <string name="info_no_workout">Dia livre? Nenhum treino cadastrado!</string>
+
+    <!-- Strings related to user -->
+    <string name="prompt_user_save">Salvar</string>
+</resources>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "265986440757",
+    "firebase_url": "https://workout-cff12.firebaseio.com",
+    "project_id": "workout-cff12",
+    "storage_bucket": "workout-cff12.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:265986440757:android:3d007372476b24c3",
+        "android_client_info": {
+          "package_name": "br.com.ratske.workout"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "265986440757-53d5fun6436263ukij1tcd59o8he93ob.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.ratske.workout",
+            "certificate_hash": "6e4ed2801d3c3d712216c7d818b7cec5cd516b8d"
+          }
+        },
+        {
+          "client_id": "265986440757-09vus2r16pmgis02u9kj0hrsq4k94av6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrDDO-G47lSK1UljFJjEWuZBkpOT4bAhw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "265986440757-09vus2r16pmgis02u9kj0hrsq4k94av6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -98,7 +98,7 @@ public class RegisterActivity extends AppCompatActivity {
                                     user.setName(textName.getText().toString());
                                     user.setEmail(firebaseUser.getEmail());
                                     user.setAge(Integer.parseInt(textAge.getText().toString()));
-                                    user.setWeight(Float.parseFloat(textWeight.getText().toString()));
+                                    user.setWeight(Double.parseDouble(textWeight.getText().toString()));
                                     user.setHeight(Integer.parseInt(textHeight.getText().toString()));
 
                                     users.child(key).setValue(user);

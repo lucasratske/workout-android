@@ -6,7 +6,7 @@ public class User {
     private String name;
     private String email;
     private int age;
-    private float weight;
+    private Double weight;
     private int height;
 
     public User() {
@@ -52,11 +52,11 @@ public class User {
         this.age = age;
     }
 
-    public float getWeight() {
+    public Double getWeight() {
         return weight;
     }
 
-    public void setWeight(float weight) {
+    public void setWeight(Double weight) {
         this.weight = weight;
     }
 

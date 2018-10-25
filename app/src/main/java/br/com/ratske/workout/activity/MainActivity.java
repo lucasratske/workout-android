@@ -2,10 +2,8 @@ package br.com.ratske.workout.activity;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.design.widget.NavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -19,11 +17,8 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.GenericTypeIndicator;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
-
-import java.util.Map;
 
 import br.com.ratske.workout.R;
 import br.com.ratske.workout.model.User;
@@ -56,31 +51,34 @@ public class MainActivity extends AppCompatActivity {
 
         FirebaseUser user = mAuth.getCurrentUser();
 
-        fbUsers = FirebaseDatabase.getInstance().getReference("users");
-        Query qUsers = fbUsers.orderByChild("authId").equalTo(user.getUid());
+        if (user != null) {
 
-        ValueEventListener userListener = new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
+            fbUsers = FirebaseDatabase.getInstance().getReference("users");
+            Query qUsers = fbUsers.orderByChild("authId").equalTo(user.getUid());
 
-                if (dataSnapshot.exists()) {
+            ValueEventListener userListener = new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
 
-                    for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                        User user = snapshot.getValue(User.class);
-                        tvWelcome.setText(getResources().getString(R.string.info_welcome) + "  " + user.getName());
+                    if (dataSnapshot.exists()) {
+
+                        for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                            User user = snapshot.getValue(User.class);
+                            tvWelcome.setText(getResources().getString(R.string.info_welcome) + "  " + user.getName());
+                        }
+
                     }
-
                 }
-            }
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-                // Getting Post failed, log a message
-                Log.w("addListenerForSingleValueEvent", "loadPost:onCancelled", databaseError.toException());
-                // ...
-            }
-        };
-        qUsers.addListenerForSingleValueEvent(userListener);
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+                    // Getting Post failed, log a message
+                    Log.w("addListenerForSingleValueEvent", "loadPost:onCancelled", databaseError.toException());
+                    // ...
+                }
+            };
+            qUsers.addListenerForSingleValueEvent(userListener);
+        }
     }
 
     @Override

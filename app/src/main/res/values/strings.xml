@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Meus Treinos</string>
     <string name="app_logout">Sair</string>
-    <string name="title_activity_login">Login</string>
-    <string name="title_activity_register">Cadastrar</string>
+    <string name="title_activity_login">Meus Treinos - Login</string>
+    <string name="title_activity_register">Meus Treinos - Cadastrar</string>
     <string name="title_activity_workouts">Lista de treinos</string>
     <string name="title_activity_user">Configurações do usuário</string>
 
@@ -12,7 +12,11 @@
     <string name="error_invalid_email">Este e-mail é invalido</string>
     <string name="error_invalid_password">Esta senha é invalida</string>
     <string name="error_incorrect_password">E-mail ou senha incorretos</string>
+    <string name="error_incorrect_user_password">Senha incorreta</string>
     <string name="error_register">Erro ao cadastrar o usuário</string>
+    <string name="error_user_change_fill">Preencha todos os campos</string>
+    <string name="error_change_email">Para sua segurança, para trocar o e-mail favor primeiro relogar</string>
+    <string name="error_change_password">Para sua segurança, para trocar a senha favor primeiro relogar</string>
 
     <!-- Strings related to messages (SUCCESS)-->
     <string name="success_signed_in">Usuário logado com sucesso</string>
@@ -56,4 +60,15 @@
 
     <!-- Strings related to user -->
     <string name="prompt_user_save">Salvar</string>
+    <string name="user_tab_text_1">Dados</string>
+    <string name="user_tab_text_2">E-mail</string>
+    <string name="user_tab_text_3">Senha</string>
+    <string name="success_user_data">Seus dados foram salvos com sucesso!</string>
+    <string name="success_user_email">Seu e-mail foi alterado com sucesso</string>
+    <string name="success_user_password">Sua senha foi alterada com sucesso!</string>
+    <string name="prompt_email_atual">Seu e-mail atual é:</string>
+    <string name="user_actual_password">Senha atual</string>
+    <string name="user_new_password">Nova senha</string>
+    <string name="user_repeat_new_password">Repita a nova senha</string>
+    <string name="prompt_user_new_email">Novo e-mail</string>
 </resources>

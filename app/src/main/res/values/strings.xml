@@ -56,7 +56,7 @@
     <string name="radio_saturday">Sábado</string>
     <string name="radio_sunday">Domingo</string>
     <string name="prompt_choose_workout_day">Escolha o dia de treino</string>
-    <string name="info_no_workout">Dia livre? Nenhum treino cadastrado!</string>
+    <string name="info_no_workout">Dia livre? Nenhum treino cadastrado para hoje!</string>
 
     <!-- Strings related to user -->
     <string name="prompt_user_save">Salvar</string>
@@ -71,4 +71,5 @@
     <string name="user_new_password">Nova senha</string>
     <string name="user_repeat_new_password">Repita a nova senha</string>
     <string name="prompt_user_new_email">Novo e-mail</string>
+    <string name="prompt_today_workouts">Treinos para hoje</string>
 </resources>

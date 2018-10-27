@@ -24,6 +24,8 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import br.com.ratske.workout.R;
@@ -75,7 +77,11 @@ public class WorkoutsActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.addItemDecoration( new DividerItemDecoration(this, LinearLayout.VERTICAL));
 
-        getWorkouts(1);
+        Calendar c = Calendar.getInstance();
+        c.setTime(new Date());
+        int dayOfWeek = c.get(Calendar.DAY_OF_WEEK) - 1;
+
+        spinner.setSelection(dayOfWeek);
 
         recyclerView.addOnItemTouchListener(
                 new RecyclerItemClickListener(

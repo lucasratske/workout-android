@@ -84,36 +84,42 @@ public class AddWorkoutDialog extends AppCompatDialogFragment {
                                             break;
                                     }
 
+
+                                    for (int c = 0; c < 10; c++) {
+
                                     //Get the key to set it into id and workouts' child
                                     String key = fbWorkout.push().getKey();
 
-                                    if (dataSnapshot.exists()) {
-                                        List<Workout> workouts = new ArrayList<>();
+                                        if (dataSnapshot.exists()) {
+                                            List<Workout> workouts = new ArrayList<>();
 
-                                        for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                                            Workout workout = snapshot.getValue(Workout.class);
-                                            workouts.add((workout));
+                                            for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                                                Workout workout = snapshot.getValue(Workout.class);
+                                                workouts.add((workout));
+                                            }
+
+                                            Workout workout = new Workout();
+                                            workout.setId(key);
+                                            workout.setName(txtWorkoutName.getText().toString());
+                                            workout.setUser(user.getUid());
+                                            workout.setOrder(workouts.size() + 1);
+                                            workout.setDayOfWeek(day);
+                                            workout.setDescription(txtWorkoutDescription.getText().toString());
+                                            fbWorkout.child(key).setValue(workout);
+
+                                        } else {
+                                            Workout workout = new Workout();
+                                            workout.setId(key);
+                                            workout.setName(txtWorkoutName.getText().toString());
+                                            workout.setUser(user.getUid());
+                                            workout.setOrder(1);
+                                            workout.setDayOfWeek(day);
+                                            workout.setDescription(txtWorkoutDescription.getText().toString());
+                                            fbWorkout.child(key).setValue(workout);
                                         }
 
-                                        Workout workout = new Workout();
-                                        workout.setId(key);
-                                        workout.setName(txtWorkoutName.getText().toString());
-                                        workout.setUser(user.getUid());
-                                        workout.setOrder(workouts.size() + 1);
-                                        workout.setDayOfWeek(day);
-                                        workout.setDescription(txtWorkoutDescription.getText().toString());
-                                        fbWorkout.child(key).setValue(workout);
-
-                                    } else {
-                                        Workout workout = new Workout();
-                                        workout.setId(key);
-                                        workout.setName(txtWorkoutName.getText().toString());
-                                        workout.setUser(user.getUid());
-                                        workout.setOrder(1);
-                                        workout.setDayOfWeek(day);
-                                        workout.setDescription(txtWorkoutDescription.getText().toString());
-                                        fbWorkout.child(key).setValue(workout);
                                     }
+
 
                                 }
 
